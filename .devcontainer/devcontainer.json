@@ -1,0 +1,17 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/go
+{
+  "name": "go_drive_backup_devcnt",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/go:1-1.24-bookworm",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "postCreateCommand": "sudo scripts/devcontainer_setup.sh",
+  "mounts": [
+    "source=go_drive_backup_build,target=/workspace/build,type=volume"
+  ],
+  "runArgs": [
+    "--name",
+    "go_drive_backup"
+  ]
+}
