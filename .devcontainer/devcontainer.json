@@ -12,6 +12,6 @@
   ],
   "runArgs": [
     "--name",
-    "go_drive_backup"
+    "go_drive_backup_devcnt"
   ]
 }
